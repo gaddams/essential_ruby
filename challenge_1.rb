@@ -26,4 +26,4 @@ end
 
 # Example usage of the method:
 
-puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
+#puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
