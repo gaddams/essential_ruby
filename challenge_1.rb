@@ -17,8 +17,13 @@ def pmt(rate, nper, pv)
   # ============================================
   # Your code to implement the method goes here.
   # ============================================
+
+  numerator = (pv*rate*(1+rate)**nper)
+  denominator =  (((1+rate)**nper)-1.0)
+  pmt = numerator.to_f/denominator.to_f
+
 end
 
 # Example usage of the method:
 
-# puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
+puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
