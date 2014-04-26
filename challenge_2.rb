@@ -15,6 +15,12 @@ loan_quotes = [
   { "bank" => "Ash Street Bank", "rate" => 0.011}
 ]
 
+# loan_quotes.each do |bank|
+#   puts "rate is #{bank["rate"]*100.round(2)}"
+#   r = (bank["rate"].to_f * 100).round(2)
+#   puts r
+# end
+
 # Given some parameters of the loan, perhaps entered by a user on a web form:
 
 number_of_payments = 180
@@ -34,7 +40,11 @@ loan_quotes.each do |bank|
   r = bank["rate"].to_f
   #puts r
   #puts "#{bank["rate"]}"
-  pmt = pmt(r,number_of_payments, principal_amount)
-  puts "Monthly payment if you go with #{bank["bank"]} will be #{pmt}"
+  pmt = pmt(r,number_of_payments, principal_amount).round(2)
+  puts "Monthly payment if you go with #{bank["bank"]} will be #{pmt} and the interest rate is #{(r*100).round(2)}%"
 
 end
+
+
+
+
